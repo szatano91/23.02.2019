@@ -1,12 +1,16 @@
 package SDA;
 
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-CountingSort sortowanie = new CountingSort();
+public class App {
+    public static void main(String[] args) {
+        CountingSort sortowanie = new CountingSort();
 
-sortowanie.countingsort(new int[]{4,2,12,34,1});
+        int[] tablica1 = sortowanie.tworzenietablicy();
+        System.out.println("Nieposortowana tablica");
+        for (int key : tablica1) {
+            System.out.print(key + " ");
+        }
+        System.out.println(" ");
+        sortowanie.countingsort(tablica1);
     }
 }
